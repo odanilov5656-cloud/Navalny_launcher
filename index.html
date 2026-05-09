@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavalnyCheats | Minimalist Launcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #050505;
+            --accent-color: #ffffff;
+            --secondary-bg: #0f0f0f;
+            --text-muted: #666666;
+            --border-color: #1a1a1a;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Header */
+        header {
+            padding: 50px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 12vw, 7rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -4px;
+            text-transform: uppercase;
+        }
+
+        /* Quote Block with Image Support */
+        .quote-section {
+            margin: 100px 0;
+            position: relative;
+            width: 100%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        /* МЕСТО ДЛЯ ВАШЕГО ФОТО */
+        .quote-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* ЗАМЕНИТЕ ССЫЛКУ НИЖЕ НА ВАШЕ ФОТО */
+            background-image: url('my-photo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.3) grayscale(1); /* Затемнение и ч/б для стиля */
+            z-index: 1;
+        }
+
+        .quote-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.4;
+            color: #ddd;
+        }
+
+        .quote-author {
+            margin-top: 20px;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+        }
+
+        /* Download Area */
+        .download-area {
+            padding: 100px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .btn-download {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 22px 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-download:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        /* Details Section (Дополнительная длина) */
+        .details {
+            padding: 150px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: start;
+        }
+
+        .detail-item h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .detail-item p {
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 100px 0 50px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; gap: 50px; }
+            .hero { padding-top: 60px; }
+            .quote-section { min-height: 400px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">NavalnyCheats</div>
+            <div style="color: var(--text-muted);">Android Edition</div>
+        </header>
+
+        <section class="hero">
+            <h1>Читы from главного liberal of Russia, Алексея Навального.</h1>
+        </section>
+
+        <!-- БЛОК С ЦИТАТОЙ И ФОТО -->
+        <section class="quote-section">
+            <div class="quote-bg"></div> <!-- Сюда вставляется фото через CSS (строка 76) -->
+            <div class="quote-content">
+                <p class="quote-text">Риск бана равен 0.01%. Цитата единственного забаненного человека: "Сука, я же по легету играл" (Алексей Навальный).</p>
+                <span class="quote-author">Project Lead</span>
+            </div>
+        </section>
+
+        <section class="download-area">
+            <p style="color: var(--text-muted); max-width: 500px; text-align: center;">Стабильная сборка v1.6.7 (Beta) Проверено на Android 1-5. Полная защита от штурма ФСБ.</p>
+            <!-- Было: <a href="#" class="btn-download">СКАЧАТЬ LAUNCHER</a> -->
+
+<!-- Стало: -->
+<a href="navalny_launcher.apk" download class="btn-download">СКАЧАТЬ LAUNCHER</a>
+
+        </section>
+
+        <!-- ДОПОЛНИТЕЛЬНЫЙ КОНТЕНТ ДЛЯ ДЛИНЫ -->
+        <section class="details">
+            <div class="grid">
+                <div class="detail-item">
+                    <h2>01. Технологии</h2>
+                    <p>Использование низкоуровневых скриптов позволяет обходить защиту на уровне ядра системы. Мы не просто модифицируем игру, мы меняем правила взаимодействия с устройством.</p>
+                </div>
+                <div class="detail-item">
+                    <h2>02. Конфиденциальность</h2>
+                    <p>Никаких логов, никакой передачи данных. Ваша активность остается только на вашем устройстве. Шифрование военного уровня защищает сам лаунчер от анализа.</p>
+                </div>
+            </div>
+            
+            <div class="grid" style="margin-top: 80px;">
+                <div class="detail-item">
+                    <h2>03. Сообщество</h2>
+                    <p>Закрытый доступ к обновлениям и базе знаний. Мы поддерживаем проект 24/7, обеспечивая актуальность методов под каждое обновление безопасности.</p>
+                </div>
+                <div class="detail-item">
+                    <h2>04. Скорость</h2>
+                    <p>Оптимизированный код не нагружает процессор. Вы получаете преимущество без потери FPS и лишнего нагрева смартфона.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 NAVALNYCHEATS. Разработано для тех, кто не согласен на меньшее.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
